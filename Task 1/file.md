@@ -5,3 +5,6 @@ Open Terminal and type leafpad <filename>.c                        Note: If leaf
 ![image alt](https://github.com/PyCoder369/VSDSquadron-Mini-research-internship/blob/8c76f6f986f9866db7c4f5782494a3380d0c4bef/1.png)
 
 Type the c program code for sum of n numbers and save
+![image alt](https://github.com/PyCoder369/VSDSquadron-Mini-research-internship/blob/770fd2ee4dbbd44d92e469d0c0ec3b1167c332ed/2.png)
+
+compile by typing gcc <filename>.c
