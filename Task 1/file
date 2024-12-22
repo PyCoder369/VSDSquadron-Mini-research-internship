@@ -1,3 +1,4 @@
 Task 1: A C program which calculates the sum of all numbers upto 'n' and compare outputs of gcc , risv64 gcc O1 and riscv64 gcc Ofast
 
 Open Terminal and type leafpad <filename>.c                                   Note: If leafpad not available install it by typing sudo apt install leafpad
+(https://github.com/user-attachments/assets/889150fc-e88b-4b4f-9100-b6c79bc09bb6)
