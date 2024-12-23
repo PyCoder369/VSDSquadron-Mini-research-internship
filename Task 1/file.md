@@ -26,15 +26,21 @@ first check for riscv64 gcc O1
 
 
 Calculate no of instructions
-![image alt]().
-
+![image alt](https://github.com/PyCoder369/VSDSquadron-Mini-research-internship/blob/3808825cbbbd8876680d418a00c7ed21ea6d829a/10.png).
+![image alt](https://github.com/PyCoder369/VSDSquadron-Mini-research-internship/blob/d37c217a416066d2b64f82072d8bb08831ca43da/11.png).
 Divide by 4 beacuse each instruction is incremented by 4
-![image alt]().
+![image alt](https://github.com/PyCoder369/VSDSquadron-Mini-research-internship/blob/496463c8037ec478d5d03bf5b26d0724b4d64c84/12.png).
+we get 15 so 15 instructions
 
-we get 11 so 11 instructions
-![image alt]().
 
 similarly repeat steps for riscv64 gcc Ofast we will be seeing lesser instructions compared to riscv64 gcc O1
 ![image alt](https://github.com/PyCoder369/VSDSquadron-Mini-research-internship/blob/1cddbd747263e652568b70fce9b8e7f19613ef5e/13.png).
 
+![image alt](https://github.com/PyCoder369/VSDSquadron-Mini-research-internship/blob/61e5e76745ad4137074e6fe75679758f63c0796c/14.png).
+
+![image alt](https://github.com/PyCoder369/VSDSquadron-Mini-research-internship/blob/61e5e76745ad4137074e6fe75679758f63c0796c/15.png).
+
+![image alt](https://github.com/PyCoder369/VSDSquadron-Mini-research-internship/blob/61e5e76745ad4137074e6fe75679758f63c0796c/16.png).
+
+Here we get 12 instructions which is less compared to O1.
 
