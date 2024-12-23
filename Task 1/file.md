@@ -26,13 +26,13 @@ first check for riscv64 gcc O1
 
 
 Calculate no of instructions
-![image alt](https://github.com/PyCoder369/VSDSquadron-Mini-research-internship/blob/1cddbd747263e652568b70fce9b8e7f19613ef5e/10.png).
+![image alt]().
 
 Divide by 4 beacuse each instruction is incremented by 4
-![image alt](https://github.com/PyCoder369/VSDSquadron-Mini-research-internship/blob/1cddbd747263e652568b70fce9b8e7f19613ef5e/11.png).
+![image alt]().
 
 we get 11 so 11 instructions
-![image alt](https://github.com/PyCoder369/VSDSquadron-Mini-research-internship/blob/1cddbd747263e652568b70fce9b8e7f19613ef5e/12.png).
+![image alt]().
 
 similarly repeat steps for riscv64 gcc Ofast we will be seeing lesser instructions compared to riscv64 gcc O1
 ![image alt](https://github.com/PyCoder369/VSDSquadron-Mini-research-internship/blob/1cddbd747263e652568b70fce9b8e7f19613ef5e/13.png).
