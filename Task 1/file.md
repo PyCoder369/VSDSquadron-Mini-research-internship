@@ -8,8 +8,10 @@ Type the c program code for sum of n numbers and save
 ![image alt](https://github.com/PyCoder369/VSDSquadron-Mini-research-internship/blob/770fd2ee4dbbd44d92e469d0c0ec3b1167c332ed/2.png)
 
 
+
 compile by typing gcc <filename>.c
 ![image alt](https://github.com/PyCoder369/VSDSquadron-Mini-research-internship/blob/1cddbd747263e652568b70fce9b8e7f19613ef5e/3.png)
+
 
 check output by typing ./a.out
 
