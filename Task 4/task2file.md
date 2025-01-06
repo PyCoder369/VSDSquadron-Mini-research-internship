@@ -1,6 +1,6 @@
 # Functional Simulation
 
-- Installing iverilog and gtkwave:
+# Installing iverilog and gtkwave:
 
 Open terminal and type following
 
