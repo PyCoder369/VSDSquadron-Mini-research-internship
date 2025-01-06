@@ -9,7 +9,7 @@ Open terminal and type following:
 
 To clone the repository and download the netlist files for simulation , type the following commands in your terminal:
 
-- git clone [https://github.com/PyCoder369/VSDSquadron-Mini-research-internship.git]
+- git clone https://github.com/PyCoder369/VSDSquadron-Mini-research-internship.git
 - cd rv32icode
 
 Type the following to simulate and run verilog code:
