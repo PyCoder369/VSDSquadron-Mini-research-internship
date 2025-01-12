@@ -39,10 +39,96 @@ The 4x1 multiplexer selects one of four input lines (I₀, I₁, I₂, I₃) bas
 
 | S₁ | S₀ | Selected Input | Output (Y) |
 |----|----|----------------|------------|
-|  0 |  0 | I₀             | I₀         |
-|  0 |  1 | I₁             | I₁         |
-|  1 |  0 | I₂             | I₂         |
-|  1 |  1 | I₃             | I₃         |
+|  0 |  0 | 1             | 1         |
+|  0 |  1 | 2             | 2         |
+|  1 |  0 | 3             | 3         |
+|  1 |  1 | 4             | 4         |
 
 
+- code
 
+```c
+#include <stdio.h>
+#include <debug.h>
+#include <ch32v00x.h>
+
+// 7-Segment Hex Values for Numbers 1, 2, 3, 4 (Active LOW for Common Cathode)
+uint8_t segment_codes[] = {
+    0x06, // 1
+    0x5B, // 2
+    0x4F, // 3
+    0x66  // 4
+};
+
+// Function to configure GPIO Pins
+void GPIO_Config(void)
+{
+    GPIO_InitTypeDef GPIO_InitStructure = {0};
+
+    // Enable Clocks for Port D (Switches) and Port C (7-Segment)
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE); // Switches
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE); // 7-Segment
+
+    // Configure PD1 and PD2 as Input Pins (Selection Lines)
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1 | GPIO_Pin_2;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU; // Input Pull-Up
+    GPIO_Init(GPIOD, &GPIO_InitStructure);
+
+    // Configure PC0 to PC6 as Output Pins (7-Segment Display)
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 |
+                                  GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_6;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP; // Output Push-Pull
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(GPIOC, &GPIO_InitStructure);
+}
+
+// Function to Display Number on 7-Segment
+void DisplayNumber(uint8_t number)
+{
+    uint8_t i;
+    for (i = 0; i < 7; i++)
+    {
+        // Write each segment value to GPIO pin
+        GPIO_WriteBit(GPIOC, (1 << i), (segment_codes[number] & (1 << i)) ? Bit_SET : Bit_RESET);
+    }
+}
+
+int main()
+{
+    uint8_t S1, S0; // Selection Lines
+
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
+    SystemCoreClockUpdate();
+    Delay_Init();
+    GPIO_Config();
+
+    while (1)
+    {
+        // Read Selection Lines from Switches
+        S1 = GPIO_ReadInputDataBit(GPIOD, GPIO_Pin_1); // Switch 1
+        S0 = GPIO_ReadInputDataBit(GPIOD, GPIO_Pin_2); // Switch 2
+
+        // Decode MUX Logic for 2-bit input
+        if (S1 == 0 && S0 == 0)
+        {
+            DisplayNumber(0); // Display 1
+        }
+        else if (S1 == 0 && S0 == 1)
+        {
+            DisplayNumber(1); // Display 2
+        }
+        else if (S1 == 1 && S0 == 0)
+        {
+            DisplayNumber(2); // Display 3
+        }
+        else if (S1 == 1 && S0 == 1)
+        {
+            DisplayNumber(3); // Display 4
+        }
+    }
+}
+
+```
+![image alt](https://github.com/PyCoder369/VSDSquadron-Mini-research-internship/blob/7a79e29a754cee738e5c4c925f05e33a054c394d/img.jpg)
+
+[video link](https://drive.google.com/file/d/1Dw59QCXSQjPM-lWMM0FLk_V7L0x5yYKN/view?usp=sharing)
