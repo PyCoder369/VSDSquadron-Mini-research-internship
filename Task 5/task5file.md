@@ -31,7 +31,14 @@ PlatformIO multi framework professional IDE
 
 ![image alt](https://github.com/PyCoder369/VSDSquadron-Mini-research-internship/blob/dc52e2a379a99b3ed9a8d84cd153f68744b9654b/circuit_image.png)
 
-4x1 Multiplexer Truth Table
+- 4x1 Multiplexer Truth Table
 The 4x1 multiplexer selects one of four input lines (I<sub>0</sub>, I<sub>1</sub>, I<sub>2</sub>, I<sub>3</sub>) based on the selection lines S<sub>1</sub> and S<sub>0</sub>.
+
+S<sub>1</sub>	S<sub>0</sub>	Selected Input	Output (Y)
+0	0	I<sub>0</sub>	I<sub>0</sub>
+0	1	I<sub>1</sub>	I<sub>1</sub>
+1	0	I<sub>2</sub>	I<sub>2</sub>
+1	1	I<sub>3</sub>	I<sub>3</sub>
+
 
 
