@@ -18,7 +18,7 @@ The output (Y) is displayed on a 7-segment LED for visualization.
 PlatformIO IDE is used to simulate and program the multiplexer logic on the VSDSquadron Mini board.
 The program reads the selection lines and determines the active input to display the corresponding output on the LED.
 
-- Components Required
+- Components Required:
 
 VSDSquadron Mini
 2 x switch for Input of binary data
@@ -29,11 +29,24 @@ Jumper Wires
 VS Code for Software Development
 PlatformIO multi framework professional IDE
 
+- Pinout:
+
+| **Component**           | **Pin/Signal**      | **GPIO Pin** | **Notes**                              |
+|--------------------------|---------------------|--------------|-----------------------------------------|
+| **Switch 1**            | PD1                | Input        | Connect with pull-up resistor          |
+| **Switch 2**            | PD2                | Input        | Connect with pull-up resistor          |
+| **7-Segment Display**   | Segment A          | PC0          | Use a 220Ω current-limiting resistor   |
+|                          | Segment B          | PC1          | Use a 220Ω current-limiting resistor   |
+|                          | Segment C          | PC2          | Use a 220Ω current-limiting resistor   |
+|                          | Segment D          | PC3          | Use a 220Ω current-limiting resistor   |
+|                          | Segment E          | PC4          | Use a 220Ω current-limiting resistor   |
+|                          | Segment F          | PC5          | Use a 220Ω current-limiting resistor   |
+|                          | Segment G          | PC6          | Use a 220Ω current-limiting resistor   |
+| **Common Pin**          | Common Cathode     | GND          | If using common anode, connect to VCC |
+
 ![image alt](https://github.com/PyCoder369/VSDSquadron-Mini-research-internship/blob/dc52e2a379a99b3ed9a8d84cd153f68744b9654b/circuit_image.png)
 
-- 4x1 Multiplexer Truth Table
-
-
+- 4x1 Multiplexer Truth Table:
 
 The 4x1 multiplexer selects one of four input lines (I₀, I₁, I₂, I₃) based on the selection lines S₁ and S₀.
 
@@ -45,7 +58,7 @@ The 4x1 multiplexer selects one of four input lines (I₀, I₁, I₂, I₃) bas
 |  1 |  1 | 4             | 4         |
 
 
-- code
+- Code:
 
 ```c
 #include <stdio.h>
@@ -130,5 +143,8 @@ int main()
 
 ```
 ![image alt](https://github.com/PyCoder369/VSDSquadron-Mini-research-internship/blob/7a79e29a754cee738e5c4c925f05e33a054c394d/img.jpg)
+
+
+- Project video:
 
 [video link](https://drive.google.com/file/d/1Dw59QCXSQjPM-lWMM0FLk_V7L0x5yYKN/view?usp=sharing)
