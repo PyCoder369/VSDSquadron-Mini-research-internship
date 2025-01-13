@@ -35,14 +35,14 @@ PlatformIO multi framework professional IDE
 |--------------------------|---------------------|--------------|-----------------------------------------|
 | **Switch 1**            | PD1                | Input        | Connect with pull-up resistor          |
 | **Switch 2**            | PD2                | Input        | Connect with pull-up resistor          |
-| **7-Segment Display**   | Segment A          | PC0          | Use a 220Ω current-limiting resistor   |
-|                          | Segment B          | PC1          | Use a 220Ω current-limiting resistor   |
-|                          | Segment C          | PC2          | Use a 220Ω current-limiting resistor   |
-|                          | Segment D          | PC3          | Use a 220Ω current-limiting resistor   |
-|                          | Segment E          | PC4          | Use a 220Ω current-limiting resistor   |
-|                          | Segment F          | PC5          | Use a 220Ω current-limiting resistor   |
-|                          | Segment G          | PC6          | Use a 220Ω current-limiting resistor   |
-| **Common Pin**          | Common Cathode     | GND          | If using common anode, connect to VCC |
+| **7-Segment Display**   | Segment A          | PC0          | 220Ω current-limiting resistor         |
+|                          | Segment B          | PC1         | 220Ω current-limiting resistor         | 
+|                          | Segment C          | PC2         | 220Ω current-limiting resistor         |
+|                          | Segment D          | PC3         | 220Ω current-limiting resistor         |
+|                          | Segment E          | PC4         | 220Ω current-limiting resistor         |
+|                          | Segment F          | PC5         | 220Ω current-limiting resistor         |
+|                          | Segment G          | PC6         | 220Ω current-limiting resistor         |
+| **Common Pin**          | Common Cathode     | GND          | If using common anode, connect to VCC  |
 
 ![image alt](https://github.com/PyCoder369/VSDSquadron-Mini-research-internship/blob/dc52e2a379a99b3ed9a8d84cd153f68744b9654b/circuit_image.png)
 
