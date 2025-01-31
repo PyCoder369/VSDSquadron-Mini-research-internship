@@ -145,6 +145,6 @@ int main()
 ![image alt](https://github.com/PyCoder369/VSDSquadron-Mini-research-internship/blob/7a79e29a754cee738e5c4c925f05e33a054c394d/img.jpg)
 
 
-- Project video:
+# Project video:
 
 [video link](https://drive.google.com/file/d/1Dw59QCXSQjPM-lWMM0FLk_V7L0x5yYKN/view?usp=sharing)
